@@ -17,14 +17,14 @@ def add_record(title, event_type, status, author, branch, url):
     payload = {
         "parent": {"database_id": DB_ID},
         "properties": {
-            "Title": {
+            "Property": {
                 "title": [{"text": {"content": title[:100]}}]
             },
             "Type": {
                 "select": {"name": event_type}
             },
             "Status": {
-                "select": {"name": status}
+                "status": {"name": status}
             },
             "Author": {
                 "rich_text": [{"text": {"content": author}}]
@@ -33,7 +33,7 @@ def add_record(title, event_type, status, author, branch, url):
                 "rich_text": [{"text": {"content": branch}}]
             },
             "URL": {
-                "url": url or None
+                "url": url if url else None
             },
             "Date": {
                 "date": {"start": datetime.now(timezone.utc).isoformat()}
