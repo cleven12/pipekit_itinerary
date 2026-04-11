@@ -32,6 +32,9 @@ def add_record(title, event_type, status, author, branch, url):
             "Branch": {
                 "rich_text": [{"text": {"content": branch}}]
             },
+            "Title": {
+                "url": url if url else None
+            },
             "URL": {
                 "url": url if url else None
             },
