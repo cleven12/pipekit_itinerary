@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Your Itinerary · PipeKit Itinerary{% endblock %}
+
+{% block content %}
+<section class="result-header">
+  <h1>Your trip to {{ destination }}</h1>
+  <p>{{ duration }} days · {{ group_size }} traveler{% if group_size != '1' %}s{% endif %}</p>
+</section>
+
+{% if interests %}
+<div class="tag-row">
+  {% for tag in interests.split(',') %}
+    <span class="tag">{{ tag.strip() }}</span>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="itinerary-placeholder">
+  <p>Your personalized itinerary is on its way.</p>
+  <p class="hint">AI-powered day-by-day planning coming in the next module.</p>
+</div>
+
+<a href="/" class="back-link">← Plan another trip</a>
+{% endblock %}
