@@ -1,0 +1,183 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f7f5f2;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  padding: 1.25rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d6a4f;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+/* ── Main ── */
+main {
+  flex: 1;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ── Hero ── */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ── Form ── */
+.itinerary-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.field-row .field {
+  flex: 1;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input, textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid #d4cfc9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1a1a;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #2d6a4f;
+}
+
+textarea { resize: vertical; }
+
+button[type="submit"] {
+  align-self: flex-start;
+  padding: 0.75rem 1.75rem;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+button[type="submit"]:hover { background: #245a42; }
+
+/* ── Result ── */
+.result-header {
+  margin-bottom: 1.5rem;
+}
+
+.result-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.result-header p {
+  color: #555;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  padding: 0.3rem 0.75rem;
+  background: #d8f3dc;
+  color: #1b4332;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.itinerary-placeholder {
+  background: #fff;
+  border: 1.5px dashed #c9c4be;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.itinerary-placeholder p { margin-bottom: 0.5rem; }
+.itinerary-placeholder .hint { font-size: 0.875rem; color: #888; }
+
+.back-link {
+  color: #2d6a4f;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: #aaa;
+  border-top: 1px solid #e8e4df;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .field-row { flex-direction: column; }
+  .hero h1 { font-size: 1.5rem; }
+}
